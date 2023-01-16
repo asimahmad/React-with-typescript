@@ -4,7 +4,7 @@ import './App.css';
 import List from './components/list'
 import AddToList from './components/AddToList';
 
-interface IState {
+export interface IState {
   people: {
     name: string,
     age: number, 
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <h1>People Invited to my party</h1>
       <List people={people} />
-      <AddToList />
+      <AddToList people={people} setPeople={setPeople} />
     </div>
   );
 }
